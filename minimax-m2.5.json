@@ -1,0 +1,227 @@
+[
+  {
+    "rubric_id": "R01",
+    "rubric_content": "代码必须使用Python和Flask框架实现Web应用程序",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确使用Python Flask框架，这是核心技术栈要求，通过检查routing.py和requirements.txt可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R02",
+    "rubric_content": "应用程序必须能够从OSRS官方API获取玩家数据",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到从OSRS官方API获取玩家数据，这是核心功能，通过检查backend/player_info.py中的get_player_data函数可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R03",
+    "rubric_content": "应用程序必须支持JSON和CSV双格式数据导出",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到支持JSON和CSV双格式导出，这是核心功能要求，通过检查backend/player_info.py中的save_to_json和save_to_csv函数可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R04",
+    "rubric_content": "应用程序必须能够获取并展示所有23个OSRS技能数据",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确支持所有23个技能数据，这是核心功能要求，通过检查player_info.py中的skills列表（包含overall+23=24个）可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R05",
+    "rubric_content": "应用程序必须包含API请求的错误处理机制",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然README未明确提及，但API请求需要错误处理以确保应用稳定性，这是隐性的鲁棒性要求，通过检查player_info.py中get_player_data函数的try-except块可验证。"
+  },
+  {
+    "rubric_id": "R06",
+    "rubric_content": "应用程序必须能够验证用户名格式",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然README未明确提及，但用户名格式验证是实际需要的功能（代码中存在validate_username函数），这是隐性的鲁棒性要求，通过代码审查可验证。"
+  },
+  {
+    "rubric_id": "R07",
+    "rubric_content": "应用程序应使用响应式Bootstrap设计",
+    "必要性": "Optional",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "templates/stats.html中使用了Bootstrap 4，但这是UI框架的常见选择而非显式要求，是隐性的风格偏好，通过检查HTML模板可验证。"
+  },
+  {
+    "rubric_id": "R08",
+    "rubric_content": "应用程序必须正确显示技能图标",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到技能图标映射，src/img_site.json包含图标URL映射，通过检查HTML模板中img标签和JSON配置文件可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R09",
+    "rubric_content": "应用程序可以将技能按逻辑分类展示（如战斗、采集等）",
+    "必要性": "Optional",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然stats.html中包含技能分类（combat, gathering等），但README未明确要求，是隐性的UI风格偏好，通过检查HTML模板中的技能分类逻辑可验证。"
+  },
+  {
+    "rubric_id": "R10",
+    "rubric_content": "应用程序必须包含Docker配置用于部署",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到Docker配置，通过检查Dockerfile可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R11",
+    "rubric_content": "应用程序必须包含Makefile构建脚本",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到Makefile构建脚本，通过检查Makefile可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R12",
+    "rubric_content": "应用程序必须能够处理OSRS API速率限制",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然README未明确提及，但OSRS API有速率限制，应用需要适当处理以避免被封禁，这是隐性的鲁棒性要求，建议添加requests timeout和重试机制。"
+  },
+  {
+    "rubric_id": "R13",
+    "rubric_content": "应用程序必须处理数据文件缺失的情况",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "routing.py中明确检查skill_stats_path是否存在（if not os.path.exists），这是显式的错误处理要求，通过代码可验证。"
+  },
+  {
+    "rubric_id": "R14",
+    "rubric_content": "应用程序必须使用正确的文件路径处理以支持跨平台兼容性",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "README提到支持macOS/Windows/Linux，代码中使用os.path模块处理路径，这是隐性的跨平台兼容性要求，通过检查代码中的路径处理方式可验证。"
+  },
+  {
+    "rubric_id": "R15",
+    "rubric_content": "应用程序必须包含安装和使用文档",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确包含完整的安装和使用文档（Quick Start、Features等），这是显式的文档要求，通过检查README.md可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R16",
+    "rubric_content": "应用程序可以支持多语言功能",
+    "必要性": "Optional",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "routing.py中包含Flask-Babel配置和LANGUAGES字典，但实际HTML模板中未使用gettext函数，是隐性的功能要求，通过代码审查可验证配置存在但未使用。"
+  },
+  {
+    "rubric_id": "R17",
+    "rubric_content": "应用程序可以使用像素风格字体增强视觉效果",
+    "必要性": "Optional",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "stats.html中引用了Pixelify Sans字体，但README未明确要求像素风格UI，这是隐性的视觉风格偏好，通过检查HTML模板可验证。"
+  },
+  {
+    "rubric_id": "R18",
+    "rubric_content": "应用程序可以包含测试脚本",
+    "必要性": "Optional",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "run_tests.sh存在但tests/unit_tests.py不存在，这是隐性的测试要求，建议创建测试脚本以完善项目。"
+  },
+  {
+    "rubric_id": "R19",
+    "rubric_content": "应用程序可以使用类型提示提高代码可维护性",
+    "必要性": "Optional",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了一些类型提示（Dict, Any, Optional等），但不是完整覆盖，这是隐性的代码风格偏好，通过代码审查可验证。"
+  },
+  {
+    "rubric_id": "R20",
+    "rubric_content": "应用程序必须为用户提供清晰的错误消息反馈",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "routing.py返回错误消息'Error, skills not found. Use skill script.'，但可以改进为更友好的用户提示，这是隐性的用户体验要求。"
+  },
+  {
+    "rubric_id": "R21",
+    "rubric_content": "应用程序必须能够获取和展示活动/小游戏数据",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到活动和小游戏统计数据，这是明确的功能要求，通过检查player_info.py中activities列表的解析逻辑可验证。"
+  },
+  {
+    "rubric_id": "R22",
+    "rubric_content": "应用程序必须能够获取和展示Boss击杀数据",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确提到Boss击杀追踪记录，这是明确的功能要求，通过检查player_info.py中bosses列表的解析逻辑可验证。"
+  },
+  {
+    "rubric_id": "R23",
+    "rubric_content": "应用程序必须在指定端口（8080）上运行Web服务",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "README明确指定端口8080（docker run -p 8080:8080），routing.py中配置app.run(port=8080)，这是明确的部署要求。"
+  },
+  {
+    "rubric_id": "R24",
+    "rubric_content": "应用程序必须使用适当的请求超时设置",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用requests.get(url, timeout=10)，这是良好的实践但非显式要求，是隐性的网络请求鲁棒性要求。"
+  },
+  {
+    "rubric_id": "R25",
+    "rubric_content": "应用程序必须能够处理API返回的异常数据格式",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "parse_hiscores_data函数处理'-1'值转换为默认值，但可以更健壮，这是隐性的数据解析鲁棒性要求。"
+  }
+]

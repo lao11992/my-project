@@ -1,0 +1,182 @@
+[
+  {
+    "rubric_id": "R001",
+    "rubric_content": "代码必须使用指定的技术栈（Python 3.8+ 和 Flask 框架）实现功能",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "技术栈选择是项目的基础要求，必须严格遵守。通过检查导入语句和框架使用可以验证。"
+  },
+  {
+    "rubric_id": "R002",
+    "rubric_content": "代码必须包含适当的错误处理机制（try-except块）来处理API调用失败情况",
+    "必要性": "Essential",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "外部API调用存在失败风险，必须实现健壮的错误处理。通过代码静态分析检查异常处理结构。"
+  },
+  {
+    "rubric_id": "R003",
+    "rubric_content": "用户输入必须进行验证和清理（如用户名格式验证）",
+    "必要性": "Essential",
+    "评估维度": "安全性（security）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "输入验证是基本安全要求，防止恶意输入。通过检查验证函数和正则表达式使用来判断。"
+  },
+  {
+    "rubric_id": "R004",
+    "rubric_content": "代码必须包含类型提示（Type Hints）以提高代码可读性和可维护性",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "类型提示是现代Python代码的最佳实践，提高代码质量。通过静态分析检查函数参数和返回值的类型注解。"
+  },
+  {
+    "rubric_id": "R005",
+    "rubric_content": "函数和模块必须包含文档字符串（docstring）说明其用途和参数",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "良好的文档是代码可维护性的关键。需要人工检查文档的完整性和准确性。"
+  },
+  {
+    "rubric_id": "R006",
+    "rubric_content": "数据存储必须支持多种格式（JSON和CSV）导出功能",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "多格式导出是数据处理的常见需求。通过运行代码测试导出功能是否正常工作。"
+  },
+  {
+    "rubric_id": "R007",
+    "rubric_content": "Web界面必须采用响应式设计（Bootstrap框架）",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "响应式设计是现代Web应用的基本要求。通过检查HTML模板中的Bootstrap类名来验证。"
+  },
+  {
+    "rubric_id": "R008",
+    "rubric_content": "代码必须遵循模块化设计原则，功能分离到不同模块中",
+    "必要性": "Essential",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "模块化设计提高代码的可维护性和可测试性。通过检查文件结构和导入关系来判断。"
+  },
+  {
+    "rubric_id": "R009",
+    "rubric_content": "Docker容器化配置必须正确设置（Dockerfile和端口映射）",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "容器化是现代应用部署的标准做法。通过检查Dockerfile配置和端口设置来验证。"
+  },
+  {
+    "rubric_id": "R010",
+    "rubric_content": "API调用必须设置合理的超时时间（建议10秒）",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "合理的超时设置防止应用无限等待。通过检查requests.get()调用的timeout参数来验证。"
+  },
+  {
+    "rubric_id": "R011",
+    "rubric_content": "数据解析逻辑必须处理API返回的空值或无效值情况",
+    "必要性": "Essential",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "外部API数据可能包含无效值，必须妥善处理。通过检查数据解析函数中的条件判断来验证。"
+  },
+  {
+    "rubric_id": "R012",
+    "rubric_content": "文件路径处理必须使用os.path.join()等跨平台方法",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "跨平台文件路径处理确保代码在不同操作系统上正常运行。通过检查路径拼接方法来验证。"
+  },
+  {
+    "rubric_id": "R013",
+    "rubric_content": "Web路由必须正确定义和映射到相应的处理函数",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "路由是Web应用的核心功能，必须正确定义。通过检查@app.route装饰器和对应函数来验证。"
+  },
+  {
+    "rubric_id": "R014",
+    "rubric_content": "依赖管理必须通过requirements.txt文件明确定义",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "明确的依赖管理是项目可重现性的基础。通过检查requirements.txt文件的存在和内容来验证。"
+  },
+  {
+    "rubric_id": "R015",
+    "rubric_content": "代码必须避免硬编码值，使用配置文件或常量定义",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "避免硬编码提高代码的可配置性和可维护性。需要人工检查代码中的魔法数字和字符串。"
+  },
+  {
+    "rubric_id": "R016",
+    "rubric_content": "数据序列化必须正确处理日期时间格式和特殊字符",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "数据序列化需要考虑各种边界情况。通过运行测试用例验证序列化的正确性。"
+  },
+  {
+    "rubric_id": "R017",
+    "rubric_content": "Web模板必须正确转义用户输入以防止XSS攻击",
+    "必要性": "Essential",
+    "评估维度": "安全性（security）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "XSS防护是Web应用的基本安全要求。通过检查模板中的变量输出是否经过适当转义来验证。"
+  },
+  {
+    "rubric_id": "R018",
+    "rubric_content": "代码必须包含适当的日志记录机制用于调试和监控",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "日志记录是应用运维和故障排查的重要工具。通过检查print()语句或logging模块的使用来验证。"
+  },
+  {
+    "rubric_id": "R019",
+    "rubric_content": "单元测试必须覆盖核心功能模块（如数据验证、API调用）",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Explicit",
+    "rationale": "测试覆盖确保代码质量和功能正确性。通过运行pytest等测试框架验证测试的存在和通过率。"
+  },
+  {
+    "rubric_id": "R020",
+    "rubric_content": "代码必须符合PEP 8编码规范（行长度、命名约定等）",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)/隐性(Implicit)": "Implicit",
+    "rationale": "统一的编码规范提高代码可读性和团队协作效率。通过静态代码分析工具（如pylint、flake8）来验证。"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "rubric_id": "R01",
+    "rubric_content": "Code must use Python and Flask framework for web application",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确使用Python Flask框架，这是核心技术栈要求，通过代码自动化/模型验证可判断是否使用了指定框架，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R02",
+    "rubric_content": "Application must fetch player data from OSRS official API",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到从OSRS官方API获取玩家数据，这是核心功能，通过运行代码可验证是否正确调用API，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R03",
+    "rubric_content": "Application must support both JSON and CSV data export formats",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确支持JSON和CSV双格式导出，这是核心功能要求，通过运行代码并检查输出文件可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R04",
+    "rubric_content": "Application must display all 23 OSRS skills data",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确支持所有23个技能数据，这是核心功能要求，通过检查代码中技能列表可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R05",
+    "rubric_content": "Application must include error handling for API requests",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但API请求需要错误处理以确保应用稳定性，这是隐性的鲁棒性要求，通过代码自动化/模型验证可判断是否包含错误处理机制。"
+  },
+  {
+    "rubric_id": "R06",
+    "rubric_content": "Application must validate username format before API call",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到用户名格式验证，这是显式的鲁棒性要求，通过代码自动化/模型验证可判断是否包含用户名验证功能。"
+  },
+  {
+    "rubric_id": "R07",
+    "rubric_content": "Application must use responsive Bootstrap design for UI",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到响应式Bootstrap设计，这是显式的UI风格要求，通过检查HTML模板可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R08",
+    "rubric_content": "Application must display skill icons correctly",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到技能图标映射，这是显式的UI功能要求，通过运行应用并检查页面可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R09",
+    "rubric_content": "Application must organize skills into logical categories (Combat, Gathering, etc.)",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到技能分类展示，这是显式的UI风格要求，通过检查HTML模板可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R10",
+    "rubric_content": "Application must include Docker configuration for deployment",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到Docker配置，这是显式的部署要求，通过检查Dockerfile可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R11",
+    "rubric_content": "Application must include Makefile for build scripts",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到Makefile构建脚本，这是显式的构建要求，通过检查Makefile可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R12",
+    "rubric_content": "Application must handle API rate limits appropriately",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但OSRS API有速率限制，应用需要适当处理以避免被封禁，这是隐性的鲁棒性要求，通过代码自动化/模型验证可判断是否包含速率限制处理机制。"
+  },
+  {
+    "rubric_id": "R13",
+    "rubric_content": "Application must include error handling for missing data files",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但应用需要处理数据文件缺失的情况以确保稳定性，这是隐性的鲁棒性要求，通过代码自动化/模型验证可判断是否包含文件缺失处理机制。"
+  },
+  {
+    "rubric_id": "R14",
+    "rubric_content": "Application must use proper file path handling for cross-platform compatibility",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但应用需要跨平台兼容，使用正确的文件路径处理是隐性的鲁棒性要求，通过代码自动化/模型验证可判断是否使用了os.path模块处理文件路径。"
+  },
+  {
+    "rubric_id": "R15",
+    "rubric_content": "Application must include proper documentation for installation and usage",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确包含安装和使用文档，这是显式的文档要求，通过检查README.md可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R16",
+    "rubric_content": "Application must support multiple languages (English and Spanish)",
+    "必要性": "Optional",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但代码中包含Flask-Babel配置，支持多语言是隐性的功能要求，通过代码自动化/模型验证可判断是否包含多语言支持。"
+  },
+  {
+    "rubric_id": "R17",
+    "rubric_content": "Application must include pixel-style UI interface as described",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到像素风格UI界面，这是显式的UI风格要求，通过运行应用并检查页面可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R18",
+    "rubric_content": "Application must include test scripts for API testing",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Repo介绍明确提到测试脚本，这是显式的测试要求，通过检查run_tests.sh可验证，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R19",
+    "rubric_content": "Application must include proper type hints for function parameters and return values",
+    "必要性": "Optional",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但代码中包含部分类型提示，使用类型提示是隐性的代码风格要求，通过代码自动化/模型验证可判断是否包含类型提示。"
+  },
+  {
+    "rubric_id": "R20",
+    "rubric_content": "Application must include proper error messages for user feedback",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "虽然Repo介绍未明确提及，但应用需要提供清晰的错误消息以提升用户体验，这是隐性的鲁棒性要求，通过运行应用并触发错误可验证。"
+  }
+]
